@@ -1,4 +1,4 @@
-# Facial Emotion Detector
+# _Facial Emotion Detector_
 
 **Author:** Muhammad Taimoor Khan
 
