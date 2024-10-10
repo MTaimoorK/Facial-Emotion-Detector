@@ -1,7 +1,7 @@
 import os
 import cv2
 import numpy as np
-from keras.preprocessing import image
+from tensorflow.keras.preprocessing import image
 import warnings
 warnings.filterwarnings("ignore")
 from keras.preprocessing.image import load_img, img_to_array
@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 
 # load the model
-model = load_model("best_model.h5")
+model = load_model("best_model.keras")
 
 face_haar_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
@@ -43,7 +43,7 @@ while True:
     resized_image = cv2.resize(test_img, (1000, 700))
     cv2.imshow('Facial Emotion Detector', resized_image)
     
-    if cv2.waitKey(10) == ord('z'): # wait untill 'z' is pressed
+    if cv2.waitKey(10) == ord('z'): # wait until 'z' is pressed
         break
 
 capture.release()
